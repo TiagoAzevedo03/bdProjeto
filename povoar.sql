@@ -1073,3 +1073,11 @@ INSERT INTO Cartao VALUES (30, 'Amarelo', 55, 544, 8);
 INSERT INTO Cartao VALUES (31, 'Amarelo', 80, 536, 8);
 INSERT INTO Cartao VALUES (32, 'Amarelo', 90, 534, 8);
 INSERT INTO Cartao VALUES (33, 'Amarelo', 78, 738, 9);
+INSERT INTO Cartao VALUES (34, 'Amarelo', 68, 627, 11);
+INSERT INTO Cartao VALUES (35, 'Amarelo', 90, 645, 11);
+INSERT INTO Cartao VALUES (36, 'Amarelo', 9, 692, 12);
+INSERT INTO Cartao VALUES (37, 'Amarelo', 53, 684, 12);
+INSERT INTO Cartao VALUES (38, 'Amarelo', 56, 685, 12);
+INSERT INTO Cartao VALUES (39, 'Amarelo', 81, 708, 12);
+INSERT INTO Cartao VALUES (40, 'Amarelo', 83, 710, 12);
+
