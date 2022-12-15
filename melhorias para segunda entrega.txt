@@ -1,6 +1,10 @@
 dividir grupos e eliminatorias
 criar modelo para prolongamentos
-criar modelo para penaltis
-mudar substituicao
-autogolos
-rever cartao
+criar modelo para penaltis -- ligar ao jogo ou ao evento
+mudar substituicao -- multiplicidade
+rever cartao -- multiplicidade
+
+penaltis:
+croacia japao
+marrocos espanha
+paises baixos argentina

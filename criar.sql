@@ -104,6 +104,7 @@ CREATE TABLE Golo(
 	minuto INT CHECK (minuto > 0),
 	idJogador INT NOT NULL,
 	idJogo INT NOT NULL,
+	autogolo BOOLEAN NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (idJogador) REFERENCES Jogador(id),
 	FOREIGN KEY (idJogo) REFERENCES Jogo(id)
