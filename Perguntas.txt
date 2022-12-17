@@ -1,0 +1,6 @@
+Lista melhor marcadores:
+
+select jogador.nome as Nome, count(*) as Golos from jogador, golo
+where jogador.id = golo.idJogador
+group by 1
+order by 2 desc;

@@ -2,6 +2,7 @@ PRAGMA FOREIGN_KEYS = ON;
 .mode columns
 .headers on
 
+DROP TABLE IF EXISTS Penaltis;
 DROP TABLE IF EXISTS Golo;
 DROP TABLE IF EXISTS Substituicao;
 DROP TABLE IF EXISTS Cartao;
@@ -107,5 +108,16 @@ CREATE TABLE Golo(
 	autogolo BOOLEAN NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (idJogador) REFERENCES Jogador(id),
+	FOREIGN KEY (idJogo) REFERENCES Jogo(id)
+);
+
+
+CREATE TABLE Penaltis(
+	id INT, 
+	idEquipa INT NOT NULL,
+	idJogo INT NOT NULL,
+	golo BOOLEAN NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (idEquipa) REFERENCES Equipa(id),
 	FOREIGN KEY (idJogo) REFERENCES Jogo(id)
 );

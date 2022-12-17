@@ -1,10 +1,5 @@
 dividir grupos e eliminatorias
 criar modelo para prolongamentos
-criar modelo para penaltis -- ligar ao jogo ou ao evento
-mudar substituicao -- multiplicidade
-rever cartao -- multiplicidade
+rever modelo para penaltis e adicionar ao relatorio
 
-penaltis:
-croacia japao
-marrocos espanha
-paises baixos argentina
+ATUALIZAR RELATORIO COM O NOVO UML
