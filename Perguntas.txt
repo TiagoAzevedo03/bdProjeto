@@ -1,6 +1,34 @@
-Lista melhor marcadores:
+Lista melhores marcadores:
 
 select jogador.nome as Nome, count(*) as Golos from jogador, golo
-where jogador.id = golo.idJogador
+where jogador.id = golo.idJogador and golo.autogolo = 0
 group by 1
 order by 2 desc;
+
+
+
+
+Quantos golos marcou Portugal no Mundial:
+
+select count(*) from golo where idJogador in
+(select id from jogador where idEquipa = 
+(select id from equipa where nome like 'Portugal'));
+
+
+
+
+Que jogadores portugueses marcaram no Mundial:
+
+select distinct jogador.nome from jogador, golo, equipa
+where jogador.id = golo.idJogador and equipa.nome = 'Portugal'
+and jogador.idEquipa = equipa.id;
+
+
+
+Quem foi o jogador mais velho a marcar num jogo a eliminar:
+
+select distinct jogador.nome from jogador, golo, jogo
+where idTipoJogo > 1 and idJogador = jogador.id
+and idJogo = jogo.id
+order by jogador.idade desc
+limit 1;
