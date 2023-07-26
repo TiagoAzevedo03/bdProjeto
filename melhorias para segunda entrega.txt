@@ -1,5 +1,0 @@
-dividir grupos e eliminatorias
-criar modelo para prolongamentos
-rever modelo para penaltis e adicionar ao relatorio
-
-ATUALIZAR RELATORIO COM O NOVO UML

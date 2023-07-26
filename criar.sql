@@ -33,6 +33,10 @@ CREATE TABLE Equipa(
 	grupo TEXT NOT NULL,
 	continente TEXT,
 	idCompeticao INT,
+	pontos INT,
+	golosMarcados INT,
+	golosSofridos INT,
+	diferencaGolos INT,
 	CONSTRAINT continente_check CHECK (continente = 'Europa' OR continente = 'Asia'
 		OR continente = 'America do Norte' OR continente = 'America Central'
 		OR continente = 'America do Sul' OR continente = 'Africa' OR
@@ -68,6 +72,8 @@ CREATE TABLE Jogo(
 	idEquipaVisitada INT, 
 	idEquipaVisitante INT, 
 	idTipoJogo INT NOT NULL, 
+	golosCasa INT,
+	golosFora INT,
 	PRIMARY KEY (id),
 	FOREIGN KEY (idEstadio) REFERENCES Estadio(id),
 	FOREIGN KEY (idEquipaVisitada) REFERENCES Equipa(id),

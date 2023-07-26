@@ -11,6 +11,7 @@ BEGIN
 END;
 
 
+
 CREATE TRIGGER IF NOT EXISTS check_cartao
 BEFORE INSERT ON Cartao
 WHEN new.idJogador not in 
@@ -20,6 +21,8 @@ or idEquipa = (select idEquipaVisitada from jogo where id = new.idJogo))
 BEGIN 
     SELECT raise (ABORT, "Jogador nao jogou esse jogo");
 END;
+
+
 
 CREATE TRIGGER IF NOT EXISTS check_sub
 BEFORE INSERT ON Substituicao
@@ -33,4 +36,14 @@ or new.idJogadorSai not in
 or idEquipa = (select idEquipaVisitada from jogo where id = new.idJogo))
 BEGIN 
     SELECT raise (ABORT, "Jogador nao jogou esse jogo");
+END;
+
+
+
+CREATE TRIGGER IF NOT EXISTS check_num
+BEFORE INSERT ON Jogador
+WHEN new.numero in (select numero from jogador where
+idEquipa = new.idEquipa)
+BEGIN 
+    SELECT raise (ABORT, "Numero ja utilizado");
 END;
